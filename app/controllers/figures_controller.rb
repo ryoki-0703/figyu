@@ -13,6 +13,10 @@ class FiguresController < ApplicationController
     @figures = Figure.all
   end
 
+  def show
+    @figure = Figure.find(params[:id])
+  end
+
   private
   def figure_params
     params.require(:figure).permit(:title, :body)
