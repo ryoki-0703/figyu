@@ -9,6 +9,10 @@ class FiguresController < ApplicationController
     redirect_to "root_path"
   end
 
+  def index
+    @figure = Figure.all
+  end
+
   private
   def figure_params
     params.require(:figure).permit(:title, :body)
