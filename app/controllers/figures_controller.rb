@@ -6,7 +6,15 @@ class FiguresController < ApplicationController
   def create
     figure = Figure.new(figure_params)
     figure.save
-    redirect_to "root_path"
+    redirect_to figure_path(figure.id)
+  end
+
+  def index
+    @figures = Figure.all
+  end
+
+  def show
+    @figure = Figure.find(params[:id])
   end
 
   private
