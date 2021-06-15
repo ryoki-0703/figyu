@@ -2,5 +2,5 @@
 
 <% @figures.each do |figure| %>
   <p>タイトル</p>
-  <span><%= figure.title %></span>
+  <%= link_to figure.title, figure_path(figure.id) %>
 <% end %>

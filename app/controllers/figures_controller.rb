@@ -6,7 +6,7 @@ class FiguresController < ApplicationController
   def create
     figure = Figure.new(figure_params)
     figure.save
-    redirect_to "/"
+    redirect_to figure_path(figure.id)
   end
 
   def index
