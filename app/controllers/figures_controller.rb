@@ -6,11 +6,11 @@ class FiguresController < ApplicationController
   def create
     figure = Figure.new(figure_params)
     figure.save
-    redirect_to "root_path"
+    redirect_to "/"
   end
 
   def index
-    @figure = Figure.all
+    @figures = Figure.all
   end
 
   private
